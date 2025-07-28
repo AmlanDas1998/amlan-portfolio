@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projects | Amlan Das</title>
+  <link rel="stylesheet" href="assets/css/style.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <div class="logo">Amlan Das</div>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html" class="active">Projects</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button class="dark-toggle" onclick="toggleDarkMode()">🌙</button>
+    </aside>
+
+    <main class="main-content" data-aos="fade-up">
+      <section class="section">
+        <h1>Projects</h1>
+        <div class="project-list">
+          <div class="project-card">
+            <h3>AA-NBFC-LSP Pilot</h3>
+            <p>Designed and launched a matchmaking model between NBFCs and LSPs on the Account Aggregator framework.</p>
+          </div>
+          <div class="project-card">
+            <h3>Gig Ecosystem Strategy</h3>
+            <p>Developed GTM and partnership strategy to onboard gig platforms like Rapido and Urban Company into AA ecosystem.</p>
+          </div>
+          <div class="project-card">
+            <h3>Home Server Ecommerce</h3>
+            <p>Architected a local ecommerce platform hosted on a home server for 50+ vendors with offline payments.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <button onclick="topFunction()" id="topBtn" title="Go to top">⬆️</button>
+  <script src="assets/js/script.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
+</body>
+</html>
