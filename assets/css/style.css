@@ -1,0 +1,152 @@
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  transition: background 0.3s, color 0.3s;
+}
+
+:root {
+  --bg: #ffffff;
+  --text: #111111;
+  --primary: #3f51b5;
+  --sidebar-bg: #f4f4f4;
+}
+
+body.dark-mode {
+  --bg: #111;
+  --text: #eee;
+  --sidebar-bg: #1e1e1e;
+}
+
+/* Layout */
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 250px;
+  background: var(--sidebar-bg);
+  padding: 2rem;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.nav a {
+  display: block;
+  margin: 1rem 0;
+  text-decoration: none;
+  color: var(--text);
+  transition: 0.3s;
+}
+
+.nav a:hover,
+.nav a.active {
+  color: var(--primary);
+  font-weight: bold;
+}
+
+.dark-toggle {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--text);
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  padding: 4rem 3rem;
+}
+
+.hero {
+  max-width: 600px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero .highlight {
+  color: var(--primary);
+}
+
+.hero p {
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+}
+
+.btn {
+  background: var(--primary);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #2f3a8f;
+}
+
+/* Back to Top Button */
+#topBtn {
+  display: none;
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  z-index: 100;
+  background-color: var(--primary);
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#topBtn:hover {
+  background-color: #2f3a8f;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .main-content {
+    padding: 2rem 1rem;
+  }
+
+  .nav {
+    display: flex;
+    gap: 1rem;
+  }
+}
